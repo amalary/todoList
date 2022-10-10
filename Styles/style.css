@@ -85,13 +85,14 @@ body {
     border-radius: 50%;
     display: flex;
     justify-content:center;
+    align-items: flex-start;
 }
 
 .circle i {
     position: absolute;
     width: 6px;
     height:50%;
-    background: #f00;
+    background: var(--clr);
 }
 
 .circle2 {
