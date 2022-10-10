@@ -18,6 +18,20 @@ body {
 
 .container {
     position: relative;
+    background: #2f363e;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    /* min-height: 500px; */
+    box-shadow: 
+    25px 25px 75px rgba(0,0,0,0.75),
+    10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -30,5 +44,27 @@ body {
     box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
     inset 5px 5px 10px rgba(0,0,0,0.5),
     inset 5px 5px 20px rgba(0,0,0,0.2),
-    inset -5px -5px 15px rgba(0,0,0,0.75)
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background:#2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i) ));
 }
