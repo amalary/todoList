@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="script" href="./Scripts/app.js">
 </head>
 <body>
     <div class = 'container'>
@@ -28,20 +29,36 @@
             <span style = "--i:12;"><b>12</b></span>
 
         </div>
+    <!--Digital clock display-->
+
+    <div id = "time">
+        <div id = "hour"></div>
+        <div id = "minutes"></div>
+        <div id = "seconds"></div>
+        <div id = "ampm"></div>
+
+    </div>
+
+
     </div>
     <script>
+
         let hr = document.querySelector('#hr')
         let mn = document.querySelector('#mn')
         let sc = document.querySelector('#sc')
 
-        let day = new Date();
-        let hh = day.getHours() * 30;
-        let mm = day.getMinutes() * 6;
-        let ss = day.getSeconds() * 6;
+        setInterval(() => {
 
-        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`
-        mn.style.transform = `rotateZ(${(mm)}deg)`
-        sc.style.transform = `rotateZ(${(ss)}deg)`
+            
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * 6;
+                    let ss = day.getSeconds() * 6;
+            
+                hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`
+                mn.style.transform = `rotateZ(${(mm)}deg)`
+                sc.style.transform = `rotateZ(${(ss)}deg)`
+        })
 
     </script>
     
