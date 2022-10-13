@@ -32,6 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -132,4 +133,19 @@ body {
     background: var(--clr);
     box-shadow: 0 0 20px var(--clr),
     0 0 60px var(--clr);
+}
+
+/* digital clock display */
+
+#time {
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 10px;
+    font-size: 2em;
+    font-weight: 600;
+    border:2px solid rgba(0,0,0,0.5);
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
 }
