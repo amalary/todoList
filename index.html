@@ -71,6 +71,9 @@
         let m = new Date().getUTCMinutes();
         let s = new Date().getUTCSeconds();
 
+
+        let am  = h>= 12 ? "PM" : "AM"; 
+
         // Convert to 24 hour clock to 12 hours 
 
         if (h > 12){
@@ -89,6 +92,8 @@
         hours.innerHTML = h;
         minutes.innerHTML = m;
         seconds.innerHTML = s;
+        ampm.innerHTML = am;
+        
 
     </script>
     
